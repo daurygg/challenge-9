@@ -159,10 +159,12 @@ font-size: 10px;
     position: block;   
     opacity: 0; 
 }
+
 .isError{
-border: 1px solid red !important;
-background: rgba(255, 175, 169, 0.3)!important;
-color: var(--Color-Tomato);
+    border: 1px solid red !important;
+    background: rgba(255, 175, 169, 0.3)!important;
+    color: var(--Color-Tomato);
+
 }
 
 .isError::placeholder{

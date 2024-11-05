@@ -2,6 +2,7 @@
 
 const form = document.getElementById('form');
 const errorSpan = document.getElementById('error-span');
+const errorform = document.getElementById("email");
 
 form.addEventListener('submit', (e)=> {
     e.preventDefault();
@@ -10,12 +11,14 @@ form.addEventListener('submit', (e)=> {
     const data = Object.fromEntries(formData);
     console.log(data);
 
-if(data.email === '' || null || undefined || !validarCorreo(data.email)){    
+if(data.email || !validarCorreo(data.email)){    
     
-    errorSpan.classList.remove("visible-error");
+    errorSpan.classList.add("visible-error");
+    errorform.classList.add("isError");
 }
 else {
-    errorSpan.classList.add("visible-error");
+    errorSpan.classList.remove("visible-error");
+    errorform.classList.remove("isError");
 }
 
 
